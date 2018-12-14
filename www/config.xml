@@ -1,15 +1,40 @@
-<?xml version='1.0' encoding='utf-8'?>
-<widget id="com.org.hello2" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Hello2</name>
-    <description>
-        Hello World sample application that responds to the deviceready event.
-    </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget
+    xmlns       = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "br.org.hello2"
+    versionCode = "1"
+    version     = "1.2.2">
+    
+    <name>HELLO2</name>
+    <author email="rodrigo@rdorval.com" href="http://www.rdorval.com">
+        HELLO2 TESTE
     </author>
+    <description>
+        Aplicativo HELLO2
+    </description>
+    
     <content src="index.html" />
+    <icon src="icon.png" />
+    
+    <allow-navigation href="*" />
+    <allow-intent href="*" />
+    <access origin="*"/>
+    
+    <access origin="http://build.phonegap.com" />
+    <access origin="http://phonegap.com" />
+    <access origin="http://phonegap.com" subdomains="true" />
+    <access origin="http://phonegap.com" browserOnly="true" />
+    
+    <access origin="https://www.youtube.com" />
+    <access origin="https://www.youtube.com" subdomains="true" />
+    <access origin="https://www.youtube.com" browserOnly="false" />
+    
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
  
-   <!-- Core plugins -->
+    <!-- Core plugins -->
     <plugin name="cordova-plugin-battery-status" spec="1.2.5" />
     <plugin name="cordova-plugin-camera" spec="3.0.0" />
     <plugin name="cordova-plugin-console" spec="1.1.0" />
@@ -54,43 +79,23 @@
     <preference name="SplashScreenDelay" value="3000" />
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarStyle" value="lightcontent" />
-	
-    <platform name="android">
-        <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
-        <icon density="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />
-        <icon density="hdpi" src="www/res/icon/android/drawable-hdpi-icon.png" />
-        <icon density="xhdpi" src="www/res/icon/android/drawable-xhdpi-icon.png" />
-        <icon density="xxhdpi" src="www/res/icon/android/drawable-xxhdpi-icon.png" />
-        <icon density="xxxhdpi" src="www/res/icon/android/drawable-xxxhdpi-icon.png" />
-        <splash density="land-ldpi" src="www/res/screen/android/drawable-land-ldpi-screen.png" />
-        <splash density="land-mdpi" src="www/res/screen/android/drawable-land-mdpi-screen.png" />
-        <splash density="land-hdpi" src="www/res/screen/android/drawable-land-hdpi-screen.png" />
-        <splash density="land-xhdpi" src="www/res/screen/android/drawable-land-xhdpi-screen.png" />
-        <splash density="land-xxhdpi" src="www/res/screen/android/drawable-land-xxhdpi-screen.png" />
-        <splash density="land-xxxhdpi" src="www/res/screen/android/drawable-land-xxxhdpi-screen.png" />
-        <splash density="port-ldpi" src="www/res/screen/android/drawable-port-ldpi-screen.png" />
-        <splash density="port-mdpi" src="www/res/screen/android/drawable-port-mdpi-screen.png" />
-        <splash density="port-hdpi" src="www/res/screen/android/drawable-port-hdpi-screen.png" />
-        <splash density="port-xhdpi" src="www/res/screen/android/drawable-port-xhdpi-screen.png" />
-        <splash density="port-xxhdpi" src="www/res/screen/android/drawable-port-xxhdpi-screen.png" />
-        <splash density="port-xxxhdpi" src="www/res/screen/android/drawable-port-xxxhdpi-screen.png" />
-    </platform>
- 
-  
-    <allow-navigation href="*" />
-    <allow-intent href="*" />
-    <access origin="*"/>
-    
-    <access origin="http://build.phonegap.com" />
-    <access origin="http://phonegap.com" />
-    <access origin="http://phonegap.com" subdomains="true" />
-    <access origin="http://phonegap.com" browserOnly="true" />
-    
-    <access origin="https://www.youtube.com" />
-    <access origin="https://www.youtube.com" subdomains="true" />
-    <access origin="https://www.youtube.com" browserOnly="false" />
     
     <platform name="android">
-        <allow-intent href="market:*" />
+        <preference name="SplashScreen" value="screen" />
+        <icon src="res/icon/android/drawable-ldpi-icon.png" density="ldpi" />
+        <icon src="res/icon/android/drawable-mdpi-icon.png" density="mdpi" />
+        <icon src="res/icon/android/drawable-hdpi-icon.png" density="hdpi" />
+        <icon src="res/icon/android/drawable-xhdpi-icon.png" density="xhdpi" />
+        <icon src="res/icon/android/drawable-xxhdpi-icon.png" density="xxhdpi" />
+        <icon src="res/icon/android/drawable-xxxhdpi-icon" density="fr-xxhdpi" />
+        
+        <splash src="res/screen/android/drawable-port-ldpi-screen.png" density="ldpi" />
+        <splash src="res/screen/android/drawable-port-mdpi-screen.png" density="mdpi" />
+        <splash src="res/screen/android/drawable-port-hdpi-screen.png" density="hdpi" />
+        <splash src="res/screen/android/drawable-port-xhdpi-screen.png" density="xhdpi" />
+        <splash src="res/screen/android/drawable-port-xxxhdpi-screen.png" density="fr-xhdpi" />
+        <splash src="res/screen/android/drawable-port-xxhdpi-screen.png" density="port-xxhdpi" />
     </platform>
 </widget>
+
+

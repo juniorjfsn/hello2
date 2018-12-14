@@ -40,78 +40,10 @@
     Author: BootstrapMade
     Author URL: https://bootstrapmade.com
   ======================================================= -->
+ 
   
   
-  
-	<script type="text/javascript" src="cordova.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
-	<script type="text/javascript">
-		app.initialize();
-	</script>
-        <script>
-        $(document).ready(function()
-        {
-            //Se esta rodando no App ou no Browser
-            window.isphone = false;
-            
-            if(document.URL.indexOf("http://") === -1 && document.URL.indexOf("https://") === -1)
-            {
-                window.isphone = true;
-            }
-                          
-            if( window.isphone )
-            {
-                document.addEventListener("deviceready", onDeviceReady, false);
-            }
-            else
-            {
-                onDeviceReady();
-            }
-        });
-        
-        function alertDismissed()
-        {
-            // do something
-        }
-       
-        //Funcões e configurações
-        function onDeviceReady()
-        {
-            var info
-            var networkState = navigator.connection.type;
-            
-            //Sem conexão
-            if(networkState == 'none')
-            {
-                navigator.notification.alert('¡Este contenido no se puede ver! ¡Es necesario estar conectado a Internet!', alertDismissed, 'Atención', 'Cerrar');
-                window.location.href='index.html';
-                exit;
-            }
-            //Conexão desconhecida
-            else if(networkState == 'unknown')
-            {
-                navigator.notification.alert('¡Este contenido no se puede ver! ¡Es necesario estar conectado a Internet!', alertDismissed, 'Atención', 'Cerrar');
-                window.location.href='index.html';
-                exit;
-            }
-            //Conexão genérica
-            else if(networkState == 'cell')
-            {
-                navigator.notification.alert('¡Este contenido no se puede ver correctamente! ¡Requiere una mejor conexión a Internet!', alertDismissed, 'Atención', 'Cerrar');
-                window.location.href='index.html';
-                exit;
-            }
-            //Conexão 2G
-            else if(networkState == 'cell_2g')
-            {
-                navigator.notification.alert('¡Este contenido no se puede ver correctamente! ¡Requiere una mejor conexión a Internet!', alertDismissed, 'Atención', 'Cerrar');
-                window.location.href='index.html';
-                exit;
-            } else {
-				$('#imei').empty().html(device.uuid); 
-            }
-        }
-        </script>
+
 </head>
 
 <body>
@@ -1132,11 +1064,12 @@
   </section>
   <!-- container section start -->
 
-  <!-- javascripts -->
+ <!-- javascripts -->
   <script src="js/jquery.js"></script>
   <script src="js/jquery-ui-1.10.4.min.js"></script>
   <script src="js/jquery-1.8.3.min.js"></script>
   <script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+  
   <!-- bootstrap -->
   <script src="js/bootstrap.min.js"></script>
   <!-- nice scroll -->
@@ -1218,7 +1151,75 @@
         });
       });
     </script>
-
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript">
+		app.initialize();
+	</script>
+        <script>
+        $(document).ready(function()
+        {
+            //Se esta rodando no App ou no Browser
+            window.isphone = false;
+            
+            if(document.URL.indexOf("http://") === -1 && document.URL.indexOf("https://") === -1)
+            {
+                window.isphone = true;
+            }
+                          
+            if( window.isphone )
+            {
+                document.addEventListener("deviceready", onDeviceReady, false);
+            }
+            else
+            {
+                onDeviceReady();
+            }
+        });
+        
+        function alertDismissed()
+        {
+            // do something
+        }
+       
+        //Funcões e configurações
+        function onDeviceReady()
+        {
+            var info
+            var networkState = navigator.connection.type;
+            
+            //Sem conexão
+            if(networkState == 'none')
+            {
+                navigator.notification.alert('¡Este contenido no se puede ver! ¡Es necesario estar conectado a Internet!', alertDismissed, 'Atención', 'Cerrar');
+                window.location.href='index.html';
+                exit;
+            }
+            //Conexão desconhecida
+            else if(networkState == 'unknown')
+            {
+                navigator.notification.alert('¡Este contenido no se puede ver! ¡Es necesario estar conectado a Internet!', alertDismissed, 'Atención', 'Cerrar');
+                window.location.href='index.html';
+                exit;
+            }
+            //Conexão genérica
+            else if(networkState == 'cell')
+            {
+                navigator.notification.alert('¡Este contenido no se puede ver correctamente! ¡Requiere una mejor conexión a Internet!', alertDismissed, 'Atención', 'Cerrar');
+                window.location.href='index.html';
+                exit;
+            }
+            //Conexão 2G
+            else if(networkState == 'cell_2g')
+            {
+                navigator.notification.alert('¡Este contenido no se puede ver correctamente! ¡Requiere una mejor conexión a Internet!', alertDismissed, 'Atención', 'Cerrar');
+                window.location.href='index.html';
+                exit;
+            } else {
+				$('#imei').empty().html(device.uuid); 
+            }
+        }
+        </script>
 </body>
 
 </html>
